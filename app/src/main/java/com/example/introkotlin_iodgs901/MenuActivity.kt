@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.introkotlin_iodgs901.cinepolis.CinepolisActivity
 import com.example.introkotlin_iodgs901.diccionario.DicActivity as DiccionarioMenuActivity
+import com.example.introkotlin_iodgs901.operaciones.OperacionesActivity
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +23,7 @@ class MenuActivity : AppCompatActivity() {
 
         val btnCinepolis = findViewById<Button>(R.id.btnCinepolis)
         val btnDiccionario = findViewById<Button>(R.id.btnDiccionario)
+        val btnOperaciones = findViewById<Button>(R.id.btnOperaciones)
 
         btnCinepolis.setOnClickListener {
             val intent = Intent(this, CinepolisActivity::class.java)
@@ -30,6 +32,11 @@ class MenuActivity : AppCompatActivity() {
 
         btnDiccionario.setOnClickListener {
             val intent = Intent(this, DiccionarioMenuActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnOperaciones.setOnClickListener {
+            val intent = Intent(this, OperacionesActivity::class.java)
             startActivity(intent)
         }
     }

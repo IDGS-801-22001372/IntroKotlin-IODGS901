@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".operaciones.OperacionesActivity">
+
+    <EditText
+        android:id="@+id/etNumero1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Número 1"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/etNumero2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Número 2"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/etNumero1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutBotones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/etNumero2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button android:id="@+id/btnSumar"
+            android:text="+"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button android:id="@+id/btnRestar"
+            android:text="-"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button android:id="@+id/btnMultiplicar"
+            android:text="×"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button android:id="@+id/btnDividir"
+            android:text="÷"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Resultado: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutBotones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

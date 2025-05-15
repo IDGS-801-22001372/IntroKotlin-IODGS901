@@ -12,7 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IntroKotlinIODGS901"
         tools:targetApi="31">
+        <activity
+            android:name=".operaciones.OperacionesActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!-- Menú Principal (con botones Cinepolis y Diccionario) -->
         <activity
             android:name=".MenuActivity"
@@ -20,11 +28,10 @@
             android:theme="@style/Theme.AppCompat.DayNight">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Diccionario -->
+        </activity> <!-- Diccionario -->
         <activity
             android:name=".diccionario.DicActivity"
             android:exported="true"
@@ -36,15 +43,11 @@
         <activity
             android:name=".diccionario.CapturaActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight" />
-
-        <!-- Cinepolis -->
+            android:theme="@style/Theme.AppCompat.DayNight" /> <!-- Cinepolis -->
         <activity
             android:name=".cinepolis.CinepolisActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight" />
-
-        <!-- Otros ejemplos -->
+            android:theme="@style/Theme.AppCompat.DayNight" /> <!-- Otros ejemplos -->
         <activity
             android:name=".SaludoActivity"
             android:exported="true" />
@@ -54,7 +57,6 @@
         <activity
             android:name=".ejemplo2.SaludoActivity"
             android:exported="true" />
-
     </application>
 
 </manifest>
