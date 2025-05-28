@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
-    android:orientation="vertical"
-
-    tools:context=".MenuActivity">
+    android:padding="16dp">
 
     <Button
-        android:id="@+id/btn1"
-        android:layout_width="365dp"
+        android:id="@+id/btnCinepolis"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="ejemplo"
+        android:text="Cinépolis"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"/>
+
+    <Button
+        android:id="@+id/btnDiccionario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Diccionario"
+        app:layout_constraintTop_toBottomOf="@id/btnCinepolis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

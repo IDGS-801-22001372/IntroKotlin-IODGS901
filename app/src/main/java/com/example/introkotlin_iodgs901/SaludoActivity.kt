@@ -11,9 +11,6 @@ class SaludoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_saludo2)
-        val tvResult = findViewById<TextView>(R.id.saludoTextView)
-        val saludo = intent.getStringExtra("saludo")
-        saludoTextView.text = saludo
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

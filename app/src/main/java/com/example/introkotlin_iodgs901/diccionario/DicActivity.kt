@@ -1,18 +1,20 @@
-package com.example.introkotlin_iodgs901
+package com.example.introkotlin_iodgs901.diccionario
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.introkotlin_iodgs901.cinepolis.CinepolisActivity
-import com.example.introkotlin_iodgs901.diccionario.DicActivity as DiccionarioMenuActivity
+import com.example.introkotlin_iodgs901.R
 
-class MenuActivity : AppCompatActivity() {
+class DicActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_menu2)
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -20,16 +22,16 @@ class MenuActivity : AppCompatActivity() {
             insets
         }
 
-        val btnCinepolis = findViewById<Button>(R.id.btnCinepolis)
-        val btnDiccionario = findViewById<Button>(R.id.btnDiccionario)
+        val btnCapturar = findViewById<Button>(R.id.btnCapturar)
+        val btnBuscar = findViewById<Button>(R.id.btnBuscar)
 
-        btnCinepolis.setOnClickListener {
-            val intent = Intent(this, CinepolisActivity::class.java)
+        btnCapturar.setOnClickListener {
+            val intent = Intent(this, CapturaActivity::class.java)
             startActivity(intent)
         }
 
-        btnDiccionario.setOnClickListener {
-            val intent = Intent(this, DiccionarioMenuActivity::class.java)
+        btnBuscar.setOnClickListener {
+            val intent = Intent(this, BuscarActivity::class.java)
             startActivity(intent)
         }
     }
